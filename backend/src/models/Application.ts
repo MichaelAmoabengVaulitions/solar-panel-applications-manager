@@ -4,3 +4,4 @@ export interface Application {
     description: string;
     status: "in_review" | "approved" | "rejected";
 }
+
