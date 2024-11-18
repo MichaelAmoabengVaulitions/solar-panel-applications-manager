@@ -18,9 +18,11 @@ export const getApplications = (req: Request, res: Response) => {
 // Get an application by ID
 export const getApplicationById = (req: Request, res: Response) => {
     const { id } = req.params;
+
     const application = applications?.find((application: Application) => application?.id === id);
 
-
+    console.log("id", id);
+    console.log("application", application);
     if (!application?.id) {
         res.status(404).json({ message: 'Application not found' });
         return
